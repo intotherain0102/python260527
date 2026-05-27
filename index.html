@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 · CSS3 · JavaScript 공부하기</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f0f7ff, #e4f2ff);
+      color: #333;
+    }
+
+    header {
+      background: #1167b1;
+      color: white;
+      padding: 20px 16px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.14);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 24px auto;
+      padding: 0 16px 32px;
+    }
+
+    section {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      margin-bottom: 24px;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    .code-sample {
+      background: #f7f9ff;
+      border: 1px solid #d9e3f3;
+      border-radius: 10px;
+      padding: 14px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      color: #0f2458;
+      overflow-x: auto;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 8px;
+    }
+
+    button {
+      border: none;
+      border-radius: 8px;
+      padding: 12px 18px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+      background: #1d7ce0;
+      color: white;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      background: #145ea8;
+    }
+
+    .result-box {
+      margin-top: 16px;
+      border-radius: 10px;
+      padding: 18px;
+      border: 1px solid #bed1f0;
+      background: #eef6ff;
+      min-height: 80px;
+    }
+
+    .highlight {
+      color: #1167b1;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 16px 8px;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding-bottom: 20px;
+      }
+
+      .button-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HTML5 · CSS3 · JavaScript 공부 페이지</h1>
+    <p>하나의 파일에 HTML, CSS, JavaScript가 함께 들어있는 예제입니다.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>HTML5 구조</h2>
+      <p>HTML은 웹 페이지의 뼈대를 정의합니다. 이 예제는 제목, 단락, 버튼, 입력 요소를 포함합니다.</p>
+      <div class="code-sample">&lt;header&gt; ... &lt;/header&gt;
+&lt;main&gt;
+  &lt;section&gt; ... &lt;/section&gt;
+&lt;/main&gt;</div>
+    </section>
+
+    <section>
+      <h2>CSS3 스타일</h2>
+      <p>CSS는 색상, 배경, 여백, 글꼴을 정의해 페이지를 보기 좋게 만듭니다.</p>
+      <div class="code-sample">body {
+  background: linear-gradient(...);
+  font-family: Arial, sans-serif;
+}
+button:hover {
+  transform: translateY(-2px);
+}</div>
+    </section>
+
+    <section>
+      <h2>JavaScript로 상호작용 추가</h2>
+      <p>버튼 클릭으로 값을 바꾸거나, 입력 값을 읽어 웹 페이지에서 보여줄 수 있습니다.</p>
+      <div class="button-row">
+        <button id="showMessageBtn">메시지 표시</button>
+        <button id="changeColorBtn">배경색 변경</button>
+      </div>
+      <div class="result-box" id="resultBox">버튼을 눌러 결과를 확인해 보세요.</div>
+    </section>
+
+    <section>
+      <h2>JavaScript 입력 예제</h2>
+      <p>아래 입력란에 텍스트를 넣고 버튼을 누르면 웹 페이지가 변합니다.</p>
+      <label for="userInput">입력 내용:</label>
+      <input type="text" id="userInput" placeholder="여기에 입력하세요" style="width:100%; padding:10px; margin-top:8px; border-radius:8px; border:1px solid #c8d6eb;" />
+      <div class="button-row" style="margin-top: 12px;">
+        <button id="submitInputBtn">입력 내용 보여주기</button>
+      </div>
+      <div class="result-box" id="inputResult">입력 결과가 여기에 표시됩니다.</div>
+    </section>
+
+    <section>
+      <h2>공부 포인트</h2>
+      <ul>
+        <li><span class="highlight">HTML</span>은 문서 구조(헤더, 섹션, 텍스트, 버튼 등)를 만들어요.</li>
+        <li><span class="highlight">CSS</span>는 디자인(색, 크기, 레이아웃, 애니메이션)을 꾸며요.</li>
+        <li><span class="highlight">JavaScript</span>는 동작(버튼 클릭, 입력 처리, 화면 변경)을 제어해요.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>이 페이지는 하나의 HTML 파일에 HTML5, CSS3, JavaScript를 모두 포함하고 있습니다.</p>
+  </footer>
+
+  <script>
+    const resultBox = document.getElementById('resultBox');
+    const inputResult = document.getElementById('inputResult');
+    const showMessageBtn = document.getElementById('showMessageBtn');
+    const changeColorBtn = document.getElementById('changeColorBtn');
+    const submitInputBtn = document.getElementById('submitInputBtn');
+    const userInput = document.getElementById('userInput');
+
+    showMessageBtn.addEventListener('click', () => {
+      resultBox.textContent = '안녕하세요! JavaScript로 동작하는 버튼입니다.';
+      resultBox.style.background = '#d9f7e8';
+    });
+
+    changeColorBtn.addEventListener('click', () => {
+      document.body.style.background = randomGradient();
+      resultBox.textContent = '배경색이 바뀌었습니다!';
+    });
+
+    submitInputBtn.addEventListener('click', () => {
+      const text = userInput.value.trim();
+      inputResult.textContent = text ? `입력한 내용: ${text}` : '아무것도 입력하지 않았습니다.';
+      inputResult.style.background = text ? '#fff7d6' : '#ffe5e5';
+    });
+
+    function randomGradient() {
+      const colors = [
+        ['#e0fffb', '#a3f7ff'],
+        ['#ffe4e1', '#ffcae0'],
+        ['#f0f7ff', '#d3e3fc'],
+        ['#fdf6e3', '#f7e3b4']
+      ];
+      const choice = colors[Math.floor(Math.random() * colors.length)];
+      return `linear-gradient(135deg, ${choice[0]}, ${choice[1]})`;
+    }
+  </script>
+</body>
+</html>
